@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Curso from '../views/Curso.vue'
-import Contact from '../views/Contact.vue'
 import NotFound from '../views/NotFound.vue'
-import Test from '../views/Contact.vue'
 
 const router = createRouter({
   history: createWebHistory(),
