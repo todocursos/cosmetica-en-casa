@@ -39,7 +39,7 @@
           class="text-primary font-weight-bold mt-10"
           block
         > 
-          Adquirir Ebook
+          comprar ahora
         </v-btn>
       </v-col>
 
@@ -153,7 +153,7 @@
     :style="{backgroundColor: infoCurso['COLOR - BACKGROUND']}"
     rounded
   >
-    <h2 class="text-h6 font-weight-bold mb-4 font-lato">Comentarios</h2>
+    <h2 class="text-h6 font-weight-bold mb-4 font-lato text-center">Comentarios</h2>
     <v-card
       class="mx-auto pa-10"
       max-width="800"
@@ -204,7 +204,14 @@
   >
     <h2 class="text-h5 font-weight-bold mb-2 font-lato">¡No esperes más para transformar tu futuro!</h2>
     <p class="mb-6 font-syne">Adquiere el ebook <span class="font-weight-bold">“{{infoCurso['TITULO']}}”</span> hoy mismo y comienza tu camino hacia el éxito.</p>
-    <v-btn block :color="infoCurso['COLOR - BUTTONS']" class="text-primary font-weight-bold">Comprar Ahora</v-btn>
+    <v-btn 
+      block 
+      :color="infoCurso['COLOR - BUTTONS']" 
+      class="text-primary font-weight-bold"
+      :href="`https://wa.me/${infoCurso['CONTACTO']}/?text=Hola, estoy interesado en el ebook: ${infoCurso['TITULO']}`"
+    >
+        Comprar Ahora
+      </v-btn>
   </v-sheet>
 
 </template>
@@ -225,9 +232,10 @@ const props = defineProps({
   }
 })
 
-const infoCurso = computed(() => {
-  let found = props.info.find(item => item['URL - NAME'] === route.params.cursoId) || {}
+console.log("ahora es: ", props.info)
 
+const infoCurso = computed(() => {
+  let found = props.info[0]
   let bonos = []
   let rev = []
 
@@ -260,6 +268,8 @@ const infoCurso = computed(() => {
   };
   
 })
+
+console.log("infoCurso: ", infoCurso.value)
 
 
 onMounted(() => {

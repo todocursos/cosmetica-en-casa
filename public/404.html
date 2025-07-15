@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=/venta-cursos/" />
+  <title>Página no encontrada</title>
+  <style>
+    body {
+      font-family: 'Lato', Arial, sans-serif;
+      background: #f9f7eb;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    p { font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+  <h1>404 - Página no encontrada</h1>
+  <p>Redirigiendo a la página principal...</p>
+  <script>
+    // Redirección para SPA en GitHub Pages
+    var path = location.pathname.replace(/^\/venta-cursos\//, '/venta-cursos/');
+    location.replace('/venta-cursos/' + (location.search || '') + (location.hash || ''));
+  </script>
+</body>
+</html>
