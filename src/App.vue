@@ -15,9 +15,10 @@
     </div>
     
     <!-- Content -->
-    <router-view v-else v-slot="{ Component }">
+    <!-- <router-view v-else v-slot="{ Component }">
       <component :is="Component" :info="cursos" />
-    </router-view>
+    </router-view> -->
+    <Curso :info="cursos"/>
     
     <Footer :info="redesSociales" />
   </v-app>
@@ -26,8 +27,8 @@
 <script setup>
 import { onBeforeMount, ref, computed } from 'vue'
 import {getSheetData} from './services/APISheet'
-import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import Curso from './views/Curso.vue'
 
 const cursos = ref([])
 const redesSociales = ref([])
@@ -38,6 +39,7 @@ const titles = computed(() => {
 })
 
 onBeforeMount( async () => {
+  window.scrollTo(0, 0);
   try {
     let response = await getSheetData()
     cursos.value = response[0]

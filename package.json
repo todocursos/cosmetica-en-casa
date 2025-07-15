@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "deploy": "gh-pages -d dist",
+    "deploy:venta": "gh-pages -d dist -r https://github.com/F-Y-M/venta-cursos.git",
+    "deploy:cosmetica": "gh-pages -d dist -r https://github.com/todocursos/cosmetica-en-casa.git",
     "preview": "vite preview",
     "lint": "eslint . --fix"
   },
