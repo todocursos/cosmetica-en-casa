@@ -29,7 +29,7 @@ Cree en ti. Aprende. Emprende. Transforma tu futuro.
 
     <v-divider></v-divider>
 
-    <div class="font-syne text-white">
+    <div class="font-lato text-white">
       {{ new Date().getFullYear() }} — <strong class="font-syne">TODO CURSOS</strong>
     </div>
   </v-footer>
