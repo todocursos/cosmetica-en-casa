@@ -4,7 +4,7 @@
 
 const SHEET_ID = import.meta.env.VITE_GOOGLE_SHEET_ID // Debe estar en tu .env
 const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY // Debe estar en tu .env
-const RANGE1 = "'cursos'!A1:BB100" // Ajusta el rango según tus datos
+const RANGE1 = "'cursos'!A1:BB2" // Ajusta el rango según tus datos
 const RANGE2 = "'redes sociales'!A1:C100"
 
 

@@ -30,6 +30,8 @@
   50% { transform: translateY(-20px); }
 }
 </style>
+
+
 <script setup>  
 import { useRouter } from 'vue-router'
 

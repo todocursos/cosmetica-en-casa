@@ -1,8 +1,7 @@
 <template>
   <v-app>
-    <Navbar :headers="titles" class="mb-10"/>
-    <br>
-    <br>
+    <!-- <Navbar :headers="titles" class="mb-10"/> -->
+    
     <!-- Loading State -->
     <div v-if="isLoading" class="d-flex justify-center align-center" style="height: 400px;">
       <LoadingSpinner />
@@ -16,7 +15,7 @@
     </div>
     
     <!-- Content -->
-    <router-view v-else v-slot="{ Component }" class="ma-10">
+    <router-view v-else v-slot="{ Component }">
       <component :is="Component" :info="cursos" />
     </router-view>
     
